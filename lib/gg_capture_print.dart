@@ -6,4 +6,5 @@
 
 library;
 
-export 'src/gg_capture_print.dart';
+export 'src/capture_print.dart';
+export 'src/has_log.dart';

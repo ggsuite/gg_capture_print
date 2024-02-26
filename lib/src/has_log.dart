@@ -1,10 +1,9 @@
-#!/usr/bin/env dart
 // @license
 // Copyright (c) 2019 - 2024 Dr. Gabriel Gatzsche. All Rights Reserved.
 //
 // Use of this source code is governed by terms that can be
 // found in the LICENSE file in the root of this package.
 
-Future<void> main() async {
-  print('Checkout tests to sse how gg_capture_print works.');
-}
+///  Returns true if the log is found in the log messages.
+bool hasLog(Pattern log, List<String> logMessages) =>
+    logMessages.any((element) => element.contains(log));
