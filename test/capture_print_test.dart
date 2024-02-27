@@ -9,18 +9,38 @@ import 'package:test/test.dart';
 
 void main() {
   group('CapturePrint', () {
-    test('should work fine', () {
-      final messages = <String>[];
+    group('should work fine', () {
+      // .......................................................................
+      test('with async methods', () async {
+        final messages = <String>[];
 
-      capturePrint(
-        log: (msg) => messages.add(msg),
-        code: () {
-          print('Hello');
-          print('World');
-        },
-      );
+        await capturePrint(
+          log: (msg) => messages.add(msg),
+          code: () {
+            return Future.delayed(const Duration(microseconds: 1), () {
+              print('Hello');
+              print('World');
+            });
+          },
+        );
 
-      expect(messages, ['Hello', 'World']);
+        expect(messages, ['Hello', 'World']);
+      });
+
+      // .......................................................................
+      test('with sync methods', () {
+        final messages = <String>[];
+
+        capturePrint(
+          log: (msg) => messages.add(msg),
+          code: () {
+            print('Hello');
+            print('World');
+          },
+        );
+
+        expect(messages, ['Hello', 'World']);
+      });
     });
   });
 }
