@@ -11,10 +11,28 @@ void main() {
   group('HasLog', () {
     test('should work fine', () {
       final logMessages = ['X  Y', 'ABC', 'DEF'];
-      expect(hasLog('X', logMessages), isTrue);
-      expect(hasLog('Y', logMessages), isTrue);
-      expect(hasLog('Z', logMessages), isFalse);
-      expect(hasLog(RegExp(r'X\s+Y'), logMessages), isTrue);
+      expect(
+        hasLog(
+          logMessages,
+          'X',
+        ),
+        isTrue,
+      );
+      expect(
+        hasLog(
+          logMessages,
+          'Y',
+        ),
+        isTrue,
+      );
+      expect(
+        hasLog(
+          logMessages,
+          'Z',
+        ),
+        isFalse,
+      );
+      expect(hasLog(logMessages, RegExp(r'X\s+Y')), isTrue);
     });
   });
 }
