@@ -7,20 +7,22 @@
 import 'dart:async';
 
 /// Captures the print statements and forwards them to the log function.
-FutureOr<void> capturePrint({
-  required void Function(String msg) log,
+FutureOr<List<String>> capturePrint({
+  void Function(String msg)? log,
   required FutureOr<void> Function() code,
 }) async {
-  final completer = Completer<void>();
+  final completer = Completer<List<String>>();
+  final messages = <String>[];
 
   var spec = ZoneSpecification(
     print: (_, __, ___, String msg) {
-      log(msg);
+      messages.add(msg);
+      log?.call(msg);
     },
   );
   Zone.current.fork(specification: spec).run(() async {
     await code();
-    completer.complete();
+    completer.complete(messages);
   });
 
   return completer.future;

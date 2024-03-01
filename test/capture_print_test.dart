@@ -13,8 +13,7 @@ void main() {
       // .......................................................................
       test('with async methods', () async {
         final messages = <String>[];
-
-        await capturePrint(
+        final messagesReturned = await capturePrint(
           log: (msg) => messages.add(msg),
           code: () {
             return Future.delayed(const Duration(microseconds: 1), () {
@@ -25,13 +24,14 @@ void main() {
         );
 
         expect(messages, ['Hello', 'World']);
+        expect(messages, messagesReturned);
       });
 
       // .......................................................................
-      test('with sync methods', () {
+      test('with sync methods', () async {
         final messages = <String>[];
 
-        capturePrint(
+        final result = capturePrint(
           log: (msg) => messages.add(msg),
           code: () {
             print('Hello');
@@ -40,6 +40,8 @@ void main() {
         );
 
         expect(messages, ['Hello', 'World']);
+        final messagesReturned = await result;
+        expect(messages, messagesReturned);
       });
     });
   });
