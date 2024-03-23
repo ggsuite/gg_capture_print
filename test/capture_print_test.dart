@@ -14,7 +14,7 @@ void main() {
       test('with async methods', () async {
         final messages = <String>[];
         final messagesReturned = await capturePrint(
-          log: (msg) => messages.add(msg),
+          ggLog: (msg) => messages.add(msg),
           code: () {
             return Future.delayed(const Duration(microseconds: 1), () {
               print('Hello');
@@ -32,7 +32,7 @@ void main() {
         final messages = <String>[];
 
         final result = capturePrint(
-          log: (msg) => messages.add(msg),
+          ggLog: (msg) => messages.add(msg),
           code: () {
             print('Hello');
             print('World');

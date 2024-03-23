@@ -6,9 +6,11 @@
 
 import 'dart:async';
 
+import 'package:gg_log/gg_log.dart';
+
 /// Captures the print statements and forwards them to the log function.
 FutureOr<List<String>> capturePrint({
-  void Function(String msg)? log,
+  GgLog? ggLog,
   required FutureOr<void> Function() code,
 }) async {
   final completer = Completer<List<String>>();
@@ -17,10 +19,10 @@ FutureOr<List<String>> capturePrint({
   var spec = ZoneSpecification(
     print: (_, __, ___, String msg) {
       messages.add(msg);
-      log?.call(msg);
+      ggLog?.call(msg);
     },
   );
-  Zone.current.fork(specification: spec).run(() async {
+  await Zone.current.fork(specification: spec).run(() async {
     await code();
     completer.complete(messages);
   });
