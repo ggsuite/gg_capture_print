@@ -1,5 +1,11 @@
 # Changelog
 
+## [Unreleased]
+
+### Removed
+
+- 'Pipline: Disable cache'
+
 ## [1.0.5] - 2024-04-09
 
 ### Changed
@@ -17,4 +23,5 @@
 
 - Initial version.
 
+[Unreleased]: https://github.com/inlavigo/gg_capture_print/compare/1.0.5...HEAD
 [1.0.5]: https://github.com/inlavigo/gg_capture_print/compare/1.0.4...1.0.5
