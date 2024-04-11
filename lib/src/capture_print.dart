@@ -6,11 +6,9 @@
 
 import 'dart:async';
 
-import 'package:gg_log/gg_log.dart';
-
 /// Captures the print statements and forwards them to the log function.
 FutureOr<List<String>> capturePrint({
-  GgLog? ggLog,
+  void Function(String)? ggLog,
   required FutureOr<void> Function() code,
 }) async {
   final completer = Completer<List<String>>();

@@ -8,8 +8,6 @@ environment:
 
 dependencies:
   args: ^2.4.2
-  colorize: ^3.0.0
-  gg_log: ^1.0.0
   path: ^1.8.0
 
 dev_dependencies:
