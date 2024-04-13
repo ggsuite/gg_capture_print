@@ -1,5 +1,11 @@
 # Changelog
 
+## [1.0.9] - 2024-04-13
+
+### Removed
+
+- dependency pana
+
 ## [1.0.8] - 2024-04-13
 
 ### Removed
@@ -35,6 +41,7 @@
 
 - Initial version.
 
+[1.0.9]: https://github.com/inlavigo/gg_capture_print/compare/1.0.8...1.0.9
 [1.0.8]: https://github.com/inlavigo/gg_capture_print/compare/1.0.7...1.0.8
 [1.0.7]: https://github.com/inlavigo/gg_capture_print/compare/1.0.6...1.0.7
 [1.0.6]: https://github.com/inlavigo/gg_capture_print/compare/1.0.5...1.0.6
