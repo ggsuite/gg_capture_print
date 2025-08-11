@@ -15,7 +15,7 @@ FutureOr<List<String>> capturePrint({
   final messages = <String>[];
 
   var spec = ZoneSpecification(
-    print: (_, __, ___, String msg) {
+    print: (_, _, _, String msg) {
       messages.add(msg);
       ggLog?.call(msg);
     },
