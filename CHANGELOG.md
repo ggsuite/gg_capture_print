@@ -1,36 +1,41 @@
 # Changelog
 
-## [Unreleased]
+## 1.0.10 - 2026-08-11
 
 ### Added
 
 - Add .gitattributes file
 
-## [1.0.9] - 2024-04-13
+### Changed
+
+- Provide gg via npm
+- Fix shell changes
+
+## 1.0.9 - 2024-04-13
 
 ### Removed
 
 - dependency pana
 
-## [1.0.8] - 2024-04-13
+## 1.0.8 - 2024-04-13
 
 ### Removed
 
-- dependency to gg\_install\_gg, remove ./check script
+- dependency to gg_install_gg, remove ./check script
 
-## [1.0.7] - 2024-04-11
+## 1.0.7 - 2024-04-11
 
 ### Removed
 
-- dependency from gg\_Log
+- dependency from gg_Log
 
-## [1.0.6] - 2024-04-10
+## 1.0.6 - 2024-04-10
 
 ### Removed
 
 - 'Pipline: Disable cache'
 
-## [1.0.5] - 2024-04-09
+## 1.0.5 - 2024-04-09
 
 ### Changed
 
@@ -46,10 +51,3 @@
 ## 1.0.3 - 2024-01-01
 
 - Initial version.
-
-[Unreleased]: https://github.com/inlavigo/gg_capture_print/compare/1.0.9...HEAD
-[1.0.9]: https://github.com/inlavigo/gg_capture_print/compare/1.0.8...1.0.9
-[1.0.8]: https://github.com/inlavigo/gg_capture_print/compare/1.0.7...1.0.8
-[1.0.7]: https://github.com/inlavigo/gg_capture_print/compare/1.0.6...1.0.7
-[1.0.6]: https://github.com/inlavigo/gg_capture_print/compare/1.0.5...1.0.6
-[1.0.5]: https://github.com/inlavigo/gg_capture_print/compare/1.0.4...1.0.5
