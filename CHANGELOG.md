@@ -9,6 +9,7 @@
 ### Changed
 
 - Provide gg via npm
+- Fix shell changes
 
 ## 1.0.9 - 2024-04-13
 
