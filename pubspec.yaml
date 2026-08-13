@@ -1,10 +1,10 @@
 name: gg_capture_print
 description: A simple function allowing to capture the exeuction of print calls..
-version: 1.0.10
+version: 1.1.0
 repository: https://github.com/inlavigo/gg_capture_print.git
 
 environment:
-  sdk: ">=3.8.0 <4.0.0"
+  sdk: ">=3.13.0 <4.0.0"
 
 dependencies:
   args: ^2.7.0
