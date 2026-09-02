@@ -9,4 +9,4 @@
 // coverage:ignore-file
 
 /// The version of the `gg_capture_print` package.
-const String ggCapturePrintVersion = '1.1.0';
+const String ggCapturePrintVersion = '1.2.0';
