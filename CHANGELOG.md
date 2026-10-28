@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.2.1 - 2026-10-28
+
+### Changed
+
+- Upgrade the DNA
+
 ## 1.2.0 - 2026-09-02
 
 ### Changed
