@@ -1,5 +1,11 @@
 # Changelog
 
+## Unreleased
+
+### Changed
+
+- Upgrade the SDK, the dependencies and the DNA
+
 ## 1.2.1 - 2026-10-28
 
 ### Changed
